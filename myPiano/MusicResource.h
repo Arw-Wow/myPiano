@@ -4,7 +4,7 @@
 
 enum MusicName
 {
-	Under_Tale, Name_Unkown, Air, Castle_in_the_Sky, Always_with_me, Jingle_Bells, Canon
+	Under_Tale, Name_Unkown, Air, Castle_in_the_Sky, Always_with_me, Jingle_Bells, Canon, Far_Sky
 };
 
 struct Music
@@ -41,6 +41,17 @@ public:
 		music_canon.source[1] = "                                                                   a       m       ,       c       v       z       v       m       m       m       ,       c       v       z       v             d       m       ,       .         ";
 		music_canon.interval = 250;
 		
+		music_far_sky.source[0] = "   4 l               k d               4 l   w i       twtkd4k   . , .   4 g  sg,.  gsdklk   .   4 k g , .   2 d 4 g .   4 g  sg,.  gsdklk   .   4 k g , .  ,g .             4 k l   klk   d 4 k g s   sd4  4d4d   sd4 j k 6 l t l   klk   d 4 k t w e 7 7   ewt   ktw  wtl6 l t 7   ewt k 4 l     ";
+		music_far_sky.source[1] = "   s                 d                 s                             1     ,     m     s     1     d     1   c g     1   m ,     m     4     1   m d     1     1                  x.    c,    cd    1,     .    b,    x1.1x b136  x.    c,    c,g,  1,     xcm  bc,1  x1.1  bc3   x. 1  bc,1       ";
+		music_far_sky.source[2] = "                                                                     x     c     x           x     .           3     x  x  1     x     g     x  x  .     c     n                   1     c     g     1     m     c             4   1     c           1                             1               ";
+		music_far_sky.source[3] = "                                                                                                               b                                                                   x     b     .     x     x     b             g   x     b           x                             x               ";
+		music_far_sky.source[4] = "   ";
+		music_far_sky.source[5] = "   ";
+		music_far_sky.source[6] = "   ";
+		music_far_sky.source[7] = "   ";
+		music_far_sky.source[8] = "   ";
+		music_far_sky.source[9] = "   ";
+		music_far_sky.interval = 250;
 	}
 
 	const Music& getMusic(MusicName in)
@@ -68,6 +79,10 @@ public:
 			break;
 		case Canon:
 			get = &music_canon;
+			break;
+		case Far_Sky:
+			get = &music_far_sky;
+			break;
 		default:
 			break;
 		}
@@ -84,5 +99,6 @@ private:
 	Music music_always_with_me;				// «ß”Î«ß—∞
 	Music music_jingle_bells;				//  •µÆ∏Ë
 	Music music_canon;						// ø®≈©
+	Music music_far_sky;					// ‘∂ø’(?)
 
 };

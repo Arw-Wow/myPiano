@@ -95,10 +95,10 @@ int main()
 
 	Load_Resource();
 
-	// music_player.set_music_source(music_resource.getMusic(Canon).source);
-	// music_player.set_interval(music_resource.getMusic(Canon).interval);
+	music_player.set_music_source(music_resource.getMusic(Canon).source);
+	music_player.set_interval(music_resource.getMusic(Canon).interval);
+	can_play = false;
 	music_player.set_start(true);
-	// can_play = false;
 
 	ExMessage msg;
 
@@ -137,7 +137,7 @@ int main()
 					{
 						is_record = false;
 						can_play = false;
-						music_player.set_interval(200);
+						music_player.set_interval(250);
 						music_player.set_start(true);
 					}
 					break;
